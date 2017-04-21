@@ -25,6 +25,13 @@ class TestCase(unittest.TestCase):
         self.assertEqual(cal.get_datetime(), selected_date)
         self.assertEqual(type(cal.get_datetime()), type(selected_date))
 
+    def test_date(self):
+        selected_date = datetime.datetime(2017, 1, 1)
+        cal = Calendar()
+        cal.set_timestamp(selected_date.timestamp())
+
+        self.assertEqual(cal.get_date(), [selected_date.year, selected_date.month, selected_date.day])
+
     def test_convert_calendar(self):
         # Gregorian To Persian
         cal_gregorian = Calendar(calendar='gregorian')

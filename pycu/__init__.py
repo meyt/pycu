@@ -86,10 +86,18 @@ class Calendar:
 
     def get_datetime(self) -> datetime:
         """
-        Get Calendar datetime
+        Get Calendar in python datetime
         :return: datetime
         """
         return datetime.datetime.fromtimestamp(self.get_timestamp())
+
+    def get_date(self) -> list:
+        """
+        Get Calendar date
+        :return: 
+        """
+        result = self.format('yyyy.M.d').split('.')
+        return [int(result[0]), int(result[1]), int(result[2])]
 
     def format(self, pattern: str) -> str:
         """
@@ -103,7 +111,7 @@ class Calendar:
 
     def strftime(self, fmt: str) -> str:
         """
-        Convert strftime patter to ICU
+        Format calendar as strftime pattern
         References: 
             - ICU: http://userguide.icu-project.org/formatparse/datetime
             - Python Datetime: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
