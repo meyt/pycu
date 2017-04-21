@@ -2,7 +2,7 @@ from setuptools import setup
 readme = open('README.rst').read()
 
 setup(name='pycu',
-      version='0.1.0',
+      version='0.2.0',
       description='PyICU Wrapper',
       long_description=readme,
       url='http://github.com/meyt/pycu',
@@ -10,7 +10,7 @@ setup(name='pycu',
       license='MIT',
       keywords='pyicu icu localization internationalization i18n calendar locale',
       classifiers=[
-          'Development Status :: 1 - Planning',
+          'Development Status :: 3 - Alpha',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: MIT License',
           'Operating System :: POSIX :: Linux',
